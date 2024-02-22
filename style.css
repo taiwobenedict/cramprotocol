@@ -167,6 +167,16 @@ header {
     background-image: url('images/smallshade.png');
 }
 
+.browser {
+    width: 30px;
+    
+}
+
+.browser img {
+    height: 33px;
+    width: 30px;
+}
+
 /* Roadmap */
 .box {
     border: solid 2px var(--primary-color);
