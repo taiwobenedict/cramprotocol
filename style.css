@@ -221,3 +221,9 @@ header {
 .advantage-5 {
     background-image: url('images/longgradient.png');
 }
+
+@media (max-width: 576px) {
+    h1, h2, h3, h4 {
+        text-align: center;
+    }
+}
