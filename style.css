@@ -75,6 +75,7 @@ header {
     z-index: 100;
     background: linear-gradient( transparent, rgba(53, 237, 192, 0) );
     transition: 0.4s;
+    top: 0;
 }
 
 .header-bg {
@@ -226,4 +227,172 @@ header {
     h1, h2, h3, h4 {
         text-align: center;
     }
+}
+
+/* Roadmap */
+
+#roadmap {
+    padding-top: 7rem;
+}
+
+.road-heading {
+    margin-bottom: 5rem;
+}
+
+.maps {
+    position: relative;
+}
+
+.road-line {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    background-color: var(--primary-color);
+    height: 1px;
+}
+
+.map-body {
+    width: 100%;
+    min-height: 400px;  
+}
+
+
+.map {
+    border: solid 1px var(--primary-color);
+    padding: 12px;
+    border-radius: 5px;
+    align-self: flex-start;
+    text-align: center;
+    position: relative;
+}
+
+.map::before {
+    content: "";
+    background-color: var(--bg-color);
+    width: 15px;
+    height: 15px;
+    rotate: 47deg;
+    border: solid 1px var(--primary-color);
+    position: absolute;
+    left: 43%;
+    transform: translate(-50%, -50%);
+    bottom: -19px; 
+}
+
+.map::after {
+    content: "";
+    background-color: var(--bg-color);
+    width: 15px;
+    height: 15px;
+    rotate: 47deg;
+    border: solid 1px var(--primary-color);
+    position: absolute;
+    left: 43%;
+    transform: translate(-50%, -50%);
+    bottom: -89px; 
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.map h5 {
+    margin-bottom: 1rem;
+}
+
+.map:nth-child(odd) {
+    align-self: flex-end;
+    
+}
+
+.map:nth-child(odd)::before {
+    border-right: none;
+    border-bottom: none;
+    top: 2.5px;
+}
+
+.map:nth-child(even)::before {
+    border-left: none;
+    border-top: none;
+}
+
+.map:nth-child(odd)::after {
+    top: -68px;
+}
+
+
+/* TOKENOMICS */
+#tokenomics {
+    position: relative;
+  }
+  
+  .token-img {
+    max-width: 700px;
+    margin-top: 40px;
+    margin-inline: auto;
+  }
+
+  .text {
+    font-size: 1.2rem;
+  }
+  
+
+  
+
+  
+
+
+@media (max-width: 991px) {
+    .map-body {
+        min-height: 500px;
+    }
+}
+
+@media (max-width: 767px) {
+    .map-body {
+        display: block !important;
+        border-left: solid 1px var(--primary-color);
+        padding-left: 25px;
+    }
+
+    .map {
+        margin-bottom: 1rem;
+        width: 100%;
+    }
+
+    .map::before {
+        left: -9px;
+        top: 45%;
+    }
+  
+    .map::after {
+        left: -36px;
+        top: 45%;
+    }
+  
+    
+    .map:nth-child(odd)::before {
+        border: solid 1px var(--primary-color);
+        border-right: none;
+        border-top: none;
+        top: 45%;
+    }
+    
+    .map:nth-child(even)::before {
+        border: solid 1px var(--primary-color);
+        border-right: none;
+        border-top: none;
+    }
+    
+    .map:nth-child(odd)::after {
+        top: 45%;
+    }
+    
+   
+
+    .road-line {
+     display: none;
+    }
+
+    
 }
