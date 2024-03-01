@@ -36,7 +36,10 @@ img {
 .btn-primary,
 .btn-primary:hover,
 .btn-primary:focus,
-.btn-primary:active {
+.btn-primary:active,
+.map:hover,
+.map:hover::before,
+.map:hover::after {
     color: var(--bg-color);
     background: var(--primary-color);
     border-color: var(--primary-color);
@@ -266,6 +269,7 @@ header {
     align-self: flex-start;
     text-align: center;
     position: relative;
+    transition: 0.4s;
 }
 
 .map::before {
@@ -279,6 +283,7 @@ header {
     left: 43%;
     transform: translate(-50%, -50%);
     bottom: -19px; 
+    transition: 0.4s;
 }
 
 .map::after {
@@ -294,6 +299,7 @@ header {
     bottom: -89px; 
     border-radius: 50%;
     z-index: 1;
+    transition: 0.4s;
 }
 
 .map h5 {
